@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <img src="/earth-icon.png" alt="Logo Terra" className="h-8 w-10 mr-2" />
-              <span className="font-bold text-xl">WALL.AI</span>
+              <span className="font-bold text-xl">Unifit</span>
             </div>
             <p className="text-gray-400 mb-6">
-              Advanced analytics and AI solutions for a sustainable and longer-living world.
+              Advanced meal planning and healthy eating solutions for university students.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-accent transition-colors">
@@ -49,35 +49,12 @@ const Footer: React.FC = () => {
             </ul>
           </div>
           
-          {/* Solutions */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Our Solutions</h3>
-            <ul className="space-y-2">
-              {[
-                'Predictive Analytics', 
-                'AI Models', 
-                'Data Processing', 
-                'Pattern Recognition',
-                'Trend Analysis',
-                'Impact Assessment'
-              ].map((item) => (
-                <li key={item}>
-                  <Link 
-                    href="#solutions" 
-                    className="text-gray-400 hover:text-accent transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
           
           {/* Newsletter */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Subscribe to Our Newsletter</h3>
             <p className="text-gray-400 mb-4">
-              Stay updated with our latest innovations in world analytics and AI.
+              Stay updated with our latest innovations in Unifit.
             </p>
             <form className="mb-4">
               <div className="flex">
@@ -103,7 +80,7 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} WALL.AI. All rights reserved.
+              &copy; {new Date().getFullYear()} Unifit. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0 flex space-x-6">
               <Link href="#" className="text-xs text-gray-400 hover:text-accent">

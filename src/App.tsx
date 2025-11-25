@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Solutions from './components/Solutions';
+import Solutions from './components/MarmitaCarousel';
 import Explore from './components/Explore';
 import CaseStudies from './components/CaseStudies';
 import About from './components/About';
@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
-    document.title = 'WALL.AI - World Analytics for Long Life';
+    document.title = 'Unifit - Nutrição Inteligente para Universitários';
 
     const handleHashChange = () => {
       const { hash } = window.location;
@@ -39,7 +39,7 @@ function App() {
         <Explore />
         <CaseStudies />
         <About />
-        <Team /> {/* 👈 Adicionado aqui corretamente */}
+        <Team /> 
         <Testimonials />
         <Contact />
       </main>

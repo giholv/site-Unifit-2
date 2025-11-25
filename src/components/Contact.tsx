@@ -33,11 +33,10 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Fale Conosco</h2>
           <div className="h-1 w-20 bg-accent mx-auto mb-6"></div>
           <p className="text-lg text-gray-600">
-            Ready to build climate resilience? Contact our team to discuss your needs and discover how we can help.
-          </p>
+Pronto para simplificar sua alimentação na faculdade? Fale com a gente e descubra o plano Unifit ideal pra você.          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -63,7 +62,7 @@ const Contact: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name
+                    Seu Nome
                   </label>
                   <input
                     type="text"
@@ -79,7 +78,7 @@ const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address
+                      Endereço de Email
                     </label>
                     <input
                       type="email"
@@ -94,7 +93,7 @@ const Contact: React.FC = () => {
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Phone Number
+                      Número de Telefone
                     </label>
                     <input
                       type="tel"
@@ -109,7 +108,7 @@ const Contact: React.FC = () => {
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Message
+                    Sua Mensagem
                   </label>
                   <textarea
                     id="message"
@@ -126,7 +125,7 @@ const Contact: React.FC = () => {
                   type="submit" 
                   className="bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-6 rounded-md transition-all hover:shadow-lg flex items-center justify-center"
                 >
-                  Send Message
+                  Enviar Mensagem
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
               </form>
@@ -136,7 +135,7 @@ const Contact: React.FC = () => {
           {/* Contact information */}
           <div>
             <div className="bg-primary rounded-lg shadow-lg p-8 text-white mb-8">
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6">Informações de Contato</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -144,9 +143,9 @@ const Contact: React.FC = () => {
                     <Mail className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-medium">Email Us</p>
-                    <a href="mailto:contato@wall.ia.com" className="text-gray-200 hover:text-white">
-                      contato@wall.ia.com
+                    <p className="font-medium">Nos mande um email</p>
+                    <a href="mailto:contato@unifit.com" className="text-gray-200 hover:text-white">
+                      contato@unifit.com
                     </a>
                   </div>
                 </div>
@@ -156,7 +155,7 @@ const Contact: React.FC = () => {
                     <Phone className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-medium">Call Us</p>
+                    <p className="font-medium">Ligue para nós</p>
                     <a href="tel:+11234567890" className="text-gray-200 hover:text-white">
                       +55 (11)4002-8922 
                     </a>
@@ -168,7 +167,7 @@ const Contact: React.FC = () => {
                     <MapPin className="h-6 w-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-medium">Visit Us</p>
+                    <p className="font-medium">Visite-nos</p>
                     <p className="text-gray-200">
                       Av. Paulista, 1106<br />
                       Bela Vista, São Paulo - SP<br />
@@ -181,29 +180,29 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="bg-white rounded-lg shadow-lg p-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Working Hours</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">Horário de Funcionamento</h3>
               
               <div className="space-y-2">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Monday - Friday:</span>
-                  <span className="font-medium">9:00 AM - 6:00 PM</span>
+                  <span className="text-gray-600">Segunda - Sexta:</span>
+                  <span className="font-medium">9:00 AM - 23:00 PM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Saturday:</span>
-                  <span className="font-medium">10:00 AM - 4:00 PM</span>
+                  <span className="text-gray-600">Sábado:</span>
+                  <span className="font-medium">Fechado</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Sunday:</span>
-                  <span className="font-medium">Closed</span>
+                  <span className="text-gray-600">Domingo:</span>
+                  <span className="font-medium">Fechado</span>
                 </div>
               </div>
               
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <p className="text-gray-600">
-                  For emergency response services, we are available 24/7.
+                  Para serviços de resposta a emergências, estamos disponíveis 24 horas por dia, 7 dias por semana.
                 </p>
-                <a href="tel:+18001234567" className="mt-2 inline-block font-semibold text-accent hover:underline">
-                  Emergency Hotline: +1 (800) 123-4567
+                <a href="tel:+551140028922" className="mt-2 inline-block font-semibold text-accent hover:underline">
+                  Linha Direta de Emergência: +55 (11) 4002-8922
                 </a>
               </div>
             </div>

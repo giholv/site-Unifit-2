@@ -6,6 +6,7 @@ interface Testimonial {
   author: string;
   position: string;
   organization: string;
+  image: string;
 }
 
 const Testimonials: React.FC = () => {
@@ -14,24 +15,30 @@ const Testimonials: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      quote: "A solução de monitoramento climático em tempo real da WALL.AI nos permitiu agir com antecedência e evacuar áreas de risco antes que o pior acontecesse. Salvamos centenas de vidas.",
-      author: "Capitão Roberto Silva",
-      position: "Coordenador de Emergências",
-      organization: "Defesa Estadual"
+      quote:
+        "A Unifit salvou minha rotina. Agora eu como bem todos os dias sem perder tempo e sem gastar mais do que posso.",
+      author: "Giovanna Pires",
+      position: "Estudante de Data Science",
+      organization: "FIAP",
+      image: "/giovanna-pires.png"
     },
     {
       id: 2,
-      quote: "Graças aos sistemas inteligentes de mitigação de desastres da WALL.AI, conseguimos proteger nossas operações industriais de enchentes frequentes, reduzindo prejuízos e garantindo a continuidade do negócio.",
-      author: "Fernanda Oliveira",
-      position: "Diretora de Sustentabilidade",
-      organization: "Grupo VerdeTech"
+      quote:
+        "As marmitas proteicas melhoraram meu desempenho no treino e ainda retiro tudo rapidinho dentro da faculdade.",
+      author: "Gabriel Santos",
+      position: "Engenharia da Computação",
+      organization: "Anhanguera",
+      image: "/gabriel-santos.png"
     },
     {
       id: 3,
-      quote: "Recebemos o alerta de fumaça da WALL.AI pouco antes do fogo atingir nossa comunidade. Foi o tempo exato para fugir com minha família. Somos eternamente gratos!",
-      author: "Carlos Mendes",
-      position: "Morador afetado por incêndio",
-      organization: "Comunidade Vale do Sol"
+      quote:
+        "Eu vivia pedindo delivery caro e demorando muito. Com a Unifit, retiro em segundos e economizo todo mês.",
+      author: "Júlia Ribeiro",
+      position: "Publicidade",
+      organization: "UNIP",
+      image: "/julia-ribeiro.png"
     }
   ];
 
@@ -39,20 +46,27 @@ const Testimonials: React.FC = () => {
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 8000);
-    
+
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
   return (
-    <section className="py-20 bg-primary">
+    <section id="testimonials" className="py-20 bg-gray-200"> 
+      {/* FUNDO CINZA AQUI */}
+      
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Depoimentos de nossos clientes</h2>
-          <div className="h-1 w-20 bg-accent mx-auto"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#2E3F55] mb-4">
+            Depoimentos de quem vive a rotina Unifit
+          </h2>
+          <div className="h-1 w-20 bg-[#2E3F55] mx-auto"></div>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-white rounded-lg p-8 shadow-lg">
+          {/* CARD AZUL UNIFIT */}
+          <div className="relative bg-[#2E3F55] rounded-lg p-8 shadow-lg">
+
+            {/* bolinhas */}
             <div className="absolute -top-5 left-1/2 transform -translate-x-1/2">
               <div className="flex space-x-2">
                 {testimonials.map((_, index) => (
@@ -60,15 +74,15 @@ const Testimonials: React.FC = () => {
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-colors ${
-                      currentTestimonial === index ? 'bg-accent' : 'bg-gray-300'
+                      currentTestimonial === index ? 'bg-white' : 'bg-gray-400'
                     }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  ></button>
+                  />
                 ))}
               </div>
             </div>
-            
-            <div className="relative overflow-hidden h-[250px]">
+
+            {/* Carrossel */}
+            <div className="relative overflow-hidden h-[260px]">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={testimonial.id}
@@ -80,22 +94,35 @@ const Testimonials: React.FC = () => {
                       : 'opacity-0 translate-x-full'
                   }`}
                 >
-                  <div className="text-center">
-                    <blockquote className="text-xl italic text-gray-700 mb-6">
+                  <div className="text-center px-4 flex flex-col items-center">
+
+                    {/* Foto */}
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.author}
+                      className="w-20 h-20 rounded-full object-cover mb-4 shadow-lg border-2 border-white"
+                    />
+
+                    <blockquote className="text-xl italic text-white mb-6">
                       "{testimonial.quote}"
                     </blockquote>
-                    <div className="mt-4">
-                      <p className="text-lg font-semibold text-primary">{testimonial.author}</p>
-                      <p className="text-gray-600">
-                        {testimonial.position}, {testimonial.organization}
-                      </p>
-                    </div>
+
+                    <p className="text-lg font-semibold text-white">
+                      {testimonial.author}
+                    </p>
+
+                    <p className="text-gray-300">
+                      {testimonial.position}, {testimonial.organization}
+                    </p>
+
                   </div>
                 </div>
               ))}
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

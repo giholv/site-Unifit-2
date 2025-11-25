@@ -15,26 +15,30 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Lista com label e href corretos
   const menuItems = [
     { label: 'Início', href: '#home' },
-    { label: 'Soluções', href: '#solutions' },
+    { label: 'Marmitas', href: '#marmita-carousel' },
     { label: 'Estudos de Caso', href: '#case-studies' },
-    { label: 'Sobre', href: '#about' },
-    { label: 'Team', href: '#team' },
+    { label: 'Sobre nós', href: '#about' },
+    { label: 'Nosso Time', href: '#team' },
   ];
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
-    }`}>
+    <header
+      className={`fixed w-full z-50 transition-all duration-300
+      ${scrolled ? 'bg-white/95 shadow-md py-2 backdrop-blur-md' : 'bg-transparent py-4'}
+    `}
+    >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        
         {/* Logo */}
         <div className="flex items-center">
-          <img src="/earth-icon.png" alt="Logo Planeta" className="h-8 w-10 mr-2" />
-          <span className={`font-bold text-xl ${scrolled ? 'text-primary' : 'text-white'}`}>
-            WALL.AI
+          <img src="/unifit-logo.png" alt="Logo Unifit" className="h-9 w-auto mr-2" />
+          <span
+            className={`font-bold text-xl tracking-tight ${
+              scrolled ? 'text-slate-800 hover:text-blue-700' : 'text-white hover:text-blue-200'
+            }`}
+          >
+
           </span>
         </div>
 
@@ -45,7 +49,9 @@ const Header: React.FC = () => {
               key={item.label}
               href={item.href}
               className={`font-medium transition-colors ${
-                scrolled ? 'text-gray-700 hover:text-primary' : 'text-white hover:text-accent'
+                scrolled
+              ? 'text-slate-800 hover:text-blue-700' : 'text-white hover:text-blue-200'
+
               }`}
             >
               {item.label}
@@ -53,9 +59,15 @@ const Header: React.FC = () => {
           ))}
 
           {/* Botão de Contato */}
-          <Link
+         <Link
             href="#contact"
-            className="bg-accent hover:bg-accent-dark text-white font-semibold py-2 px-4 rounded-md transition-all transform hover:scale-105"
+            className={`font-semibold py-2 px-4 rounded-md transition-all transform hover:scale-105
+              ${
+                scrolled
+                  ? 'bg-[#417078] hover:bg-[#2e4f54] text-white'
+                  : 'bg-[#417078] text-white hover:bg-[#2e4f54]'
+              }
+            `}
           >
             Contato
           </Link>
@@ -68,16 +80,16 @@ const Header: React.FC = () => {
           aria-label="Toggle menu"
         >
           {isOpen ? (
-            <X className={`h-6 w-6 ${scrolled ? 'text-primary' : 'text-white'}`} />
+            <X className={`h-6 w-6 ${scrolled ? 'text-blue-900' : 'text-white'}`} />
           ) : (
-            <Menu className={`h-6 w-6 ${scrolled ? 'text-primary' : 'text-white'}`} />
+            <Menu className={`h-6 w-6 ${scrolled ? 'text-blue-900' : 'text-white'}`} />
           )}
         </button>
       </div>
 
       {/* Navegação Mobile */}
       <div
-        className={`md:hidden fixed inset-0 bg-primary bg-opacity-95 z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-0 bg-blue-900/95 z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -86,7 +98,7 @@ const Header: React.FC = () => {
             <Link
               key={item.label}
               href={item.href}
-              className="text-white text-2xl font-medium hover:text-accent"
+              className="text-white text-2xl font-medium hover:text-blue-200"
               onClick={() => setIsOpen(false)}
             >
               {item.label}
@@ -99,4 +111,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-

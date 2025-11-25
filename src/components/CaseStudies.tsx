@@ -20,7 +20,7 @@ const CaseStudies: React.FC = () => {
       location: "Maria Eduarda • Enfermagem • UNIP",
       image: "/case-unifit-1.png",
       challenge:
-        "Com plantão, estágio e aulas, Maria vivia pulando refeições ou comendo qualquer lanche rápido, se sentia cansada e gastava mais do que podia.",
+        "Com plantão, estágio e aulas, Maria vivia pulando as refeições ou comendo qualquer lanche rápido, se sentia cansada e gastava mais do que podia.",
       solution:
         "Ela contratou um plano semanal da Unifit com marmitas já organizadas por dia, retirando tudo dentro da faculdade nos intervalos entre aulas.",
       result:
@@ -54,7 +54,7 @@ const CaseStudies: React.FC = () => {
       id: 4,
       title: "Planejamento alimentar para focar no TCC",
       location: "Pedro Carvalho • Administração • UNIFESP",
-      image: "/case-unifit-4.png",
+      image: "/ .png",
       challenge:
         "Com o TCC e estágio, Pedro não queria perder tempo pensando em almoço e jantar, mas também não queria descuidar da saúde.",
       solution:

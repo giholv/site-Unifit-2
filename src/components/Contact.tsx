@@ -169,9 +169,9 @@ Pronto para simplificar sua alimentação na faculdade? Fale com a gente e descu
                   <div>
                     <p className="font-medium">Visite-nos</p>
                     <p className="text-gray-200">
-                      Av. Paulista, 1106<br />
-                      Bela Vista, São Paulo - SP<br />
-                      Brasil, 01310-100
+                      Avenida Doutor Adolpho Pinto, 109 <br />
+                      Barra Funda, São Paulo - SP<br />
+                      Brasil,
                     </p>
 
                   </div>
